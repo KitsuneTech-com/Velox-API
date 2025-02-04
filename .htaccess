@@ -1,0 +1,8 @@
+<Directory "/web/root">
+	RewriteEngine On
+	RewriteBase "/api/"
+
+# rewrite API path to base endpoint with path as query string
+# /base/level1/level2 to /base/index.php?path=level1/level2 
+  RewriteRule (.*) /api/index.php?path=$1 [PT]
+</Directory>

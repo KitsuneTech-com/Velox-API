@@ -8,9 +8,9 @@
 
 // Note: these classes are defined by way of the autoloader include in the API endpoint script. As such, this template is only
 // intended to be used in the context of the Velox API.
-use KitsuneTech\Velox\Database\Connection as Connection;
+use KitsuneTech\Velox\Database\Connection;
 use KitsuneTech\Velox\Database\Procedures\{Query, PreparedStatement, StatementSet};
-use function KitsuneTech\Velox\Database\oneShot as oneShot;
+use function KitsuneTech\Velox\Database\oneShot;
 
 /*
 $QUERY_VERSION should be incremented any time the result set schema changes. This will be sent as a header with the response

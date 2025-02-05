@@ -2,11 +2,11 @@
 $apitree = //parse API tree into nested array -- this could be an actual directory tree or a virtual representation
 $path = explode("/",$_GET['path']);
 $postdata = $_POST;
-foreach ($key in $pathArray){
+foreach ($path as $key){
 	try {
 		$apitree = $apitree[$key];
 	}
-	catch($ex){
+	catch(Exception $ex){
 		//The path is invalid if any portion of it doesn't resolve to an element in $apitree
 		die("Invalid path");
 	}
